@@ -1,0 +1,52 @@
+// Variables
+// --------------------------------------------------
+
+// Base
+// -------------------------
+
+$root: 16px;
+$default-height: 88px;
+
+
+// Fonts
+// -------------------------
+
+$font-size: $root;
+$font-family: "PingFang SC",
+"Hiragino Sans GB",
+"Microsoft YaHei",
+"微软雅黑",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol";
+$line-height: 1.5;
+$font-size-lg: 50px;
+$font-size-md: $root;
+$font-size-sm: 24px;
+$font-size-xs: 20px;
+
+$font-size-h1: 42px;
+$font-size-h2: 36px;
+$font-size-h3: 32px;
+$font-size-h4: 30px;
+$font-size-h5: $root;
+$font-size-h6: 26px;
+
+
+//内容区背景
+$mainBackground:rgba(245, 246, 250, 1);
+//checkbox选中背景色
+$color-default: #292929;
+$border: 1px solid #ccc;
+
+/* 改变主题色变量 */
+$--color-primary: #292929;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
