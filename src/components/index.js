@@ -1,9 +1,9 @@
 /*
  * @Author: ysz
- * @describe: 按需引入ui组件
+ * @describe: 按需引入ui组件(全局注册)
  * @Date: 2019-05-30 16:24:19
  * @Last Modified by: ysz
- * @Last Modified time: 2019-05-30 16:26:10
+ * @Last Modified time: 2019-05-31 10:07:20
  */
 
 import Vue from 'vue';

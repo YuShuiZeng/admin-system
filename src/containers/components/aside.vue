@@ -1,11 +1,12 @@
 <template>
-    <el-aside width="200px" class="left-menu">
+    <el-aside class="left-menu" width="auto">
         <div class="left-menu-header">
             <img src="~assets/images/logo.png" alt="">
         </div>
         <el-menu
-            default-active="2"
-            class="el-menu-vertical-demo"
+            :collapse="isCollapse"
+            default-active="1-1-1"
+            class="left-menu-list"
             @open="handleOpen"
             background-color="#545c64"
             text-color="#fff"
@@ -13,29 +14,25 @@
             @close="handleClose">
             <el-submenu index="1">
                  <template slot="title">
-                    <i class="el-icon-location"></i>
-                    <span>导航一</span>
+                    <i class="geek-icon geek-icon-main"></i>
+                    <span>导航-one</span>
                 </template>
                 <el-menu-item-group>
                     <template slot="title">分组一</template>
                     <el-menu-item index="1-1" @click="jump('/testPage1/page1')">选项1</el-menu-item>
                     <el-menu-item index="1-2" @click="jump('/testPage1/page2')">选项2</el-menu-item>
                 </el-menu-item-group>
-                <!-- <el-submenu index="1-4">
-                    <template slot="title">选项4</template>
-                    <el-menu-item index="1-4-1">选项1</el-menu-item>
-                </el-submenu> -->
             </el-submenu>
             <el-menu-item index="2" @click="jump('/testPage2')">
-                <i class="el-icon-menu"></i>
+                <i class="geek-icon geek-icon-menu"></i>
                 <span slot="title">导航二</span>
             </el-menu-item>
             <el-menu-item index="3" disabled>
-                <i class="el-icon-document"></i>
+                <i class="geek-icon geek-icon-main"></i>
                 <span slot="title">导航三</span>
             </el-menu-item>
             <el-menu-item index="4">
-                <i class="el-icon-setting"></i>
+                <i class="geek-icon geek-icon-setting"></i>
                 <span slot="title">导航四</span>
             </el-menu-item>
         </el-menu>
@@ -44,6 +41,11 @@
 
 <script>
     export default {
+        data() {
+            return {
+                isCollapse: true,
+            };
+        },
         methods: {
             handleOpen() {},
             handleClose() {},
@@ -58,12 +60,17 @@
 
 <style lang="scss" scoped>
     .left-menu{
+        text-align: center;
         &-header{
             text-align: center;
             padding: 20px 0;
             img{
-                width: 70px;
+                width: 50px;
             }
+        }
+        &-list:not(.el-menu--collapse) {
+            width: 200px;
+            min-height: 400px;
         }
     }
     .el-aside {
@@ -75,8 +82,12 @@
         border: none;
     }
     .el-submenu{
+        text-align: center!important;
         .el-menu-item{
             width: 100%;
+        }
+        &__title{
+            text-align: center!important;
         }
     }
 </style>

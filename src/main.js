@@ -5,7 +5,9 @@ import './components';
 import './assets/styles/index.scss';
 import App from './views/App';
 import router from './router';
+import store from './store';
 import './plugins';
+import './api';
 
 Vue.config.productionTip = false;
 
@@ -13,6 +15,7 @@ Vue.config.productionTip = false;
 new Vue({
     el: '#app',
     router,
+    store,
     components: { App },
     template: '<App/>',
 });

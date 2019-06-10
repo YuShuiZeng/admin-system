@@ -79,10 +79,13 @@ module.exports = new Promise((resolve, reject) => {
       // add port to devServer config
       devWebpackConfig.devServer.port = port
 
+      const proxyAddress = config.dev.proxyTable['/api'].target || '暂未设置代理地址'
+
       // Add FriendlyErrorsPlugin
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {
           messages: [`Your application is running here: http://${require('ip').address()}:${port}`],
+          notes: [`The proxy address is here: ${proxyAddress}`],
         },
         onErrors: config.dev.notifyOnErrors
         ? utils.createNotifierCallback()

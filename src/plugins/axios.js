@@ -1,3 +1,10 @@
+/*
+ * @Author: ysz
+ * @describe: axios请求封装
+ * @Date: 2019-05-31 10:09:11
+ * @Last Modified by: ysz
+ * @Last Modified time: 2019-05-31 10:09:36
+ */
 import axios from 'axios';
 
 axios.defaults.baseURL = '/';

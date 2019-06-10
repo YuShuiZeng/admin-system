@@ -1,12 +1,16 @@
 <template>
     <div class="admin-common-header">
-        <span></span>
+        <span><img :src="userInfo.avatar" alt=""></span>
     </div>
 </template>
 
 <script>
     export default {
-
+        computed: {
+            userInfo() {
+                return this.$store.state.user.userInfo;
+            },
+        },
     };
 </script>
 
@@ -22,8 +26,9 @@
         span{
             width: 50px;
             height: 50px;
-            border-radius: 50%;
-            background: cadetblue;
+            img{
+                border-radius: 50%;
+            }
         }
     }
 </style>

@@ -1,3 +1,10 @@
+/*
+ * @Author: ysz
+ * @describe: 大首页布局
+ * @Date: 2019-05-31 10:07:51
+ * @Last Modified by: ysz
+ * @Last Modified time: 2019-06-06 10:29:11
+ */
 <template>
     <el-container class="worken-contain">
         <woken-aside></woken-aside>
